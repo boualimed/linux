@@ -95,3 +95,12 @@ vdd channel is connected to output 0 of the &ref device.
 		io-channels = <&adc 10>, <&adc 11>;
 		io-channel-names = "adc1", "adc2";
 	};
+
+==Common IIO properties==
+
+Reference voltage:
+ADCs, DACs and several other IIO devices require a reference voltage.
+By convention the property specifying this regulator is named "vref-supply".
+If the chip lacks a dedicated Vref pin and instead uses its own power supply
+as reference, the property specifying the regulator is commonly named
+"vdd-supply" or "vcc-supply".
